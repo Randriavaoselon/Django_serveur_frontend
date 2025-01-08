@@ -1,0 +1,148 @@
+.video-streams-container {
+  display: flex;
+  flex-direction: row; /* Aligne les enfants horizontalement */
+  height: 100vh; /* Hauteur pleine page */
+  background-color: #f4f4f4;
+}
+
+.clients-list {
+  flex: 0 0 300px; /* Largeur fixe pour la liste */
+  height: 100%; /* Prend toute la hauteur du conteneur parent */
+  overflow-y: auto; /* Scrollbar verticale si nécessaire */
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  align-items: center; /* Aligne verticalement le bouton et le titre */
+  margin-bottom: 16px;
+  gap: 10px; /* Ajoute un espace uniforme entre le bouton et le titre */
+}
+
+.back-button-stream {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #007bff; /* Couleur bleue vive pour le bouton */
+  color: white; /* Texte blanc */
+  border: none;
+  border-radius: 50%; /* Rond */
+  width: 40px; /* Taille fixe pour un bouton visible */
+  height: 40px; /* Taille fixe pour un bouton visible */
+  font-size: 20px; /* Taille de la flèche */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre */
+  transition: background-color 0.3s, transform 0.2s; /* Animation fluide */
+}
+
+.back-button:hover {
+  background-color: #0056b3; /* Couleur bleue plus sombre au survol */
+  transform: scale(1.1); /* Agrandit légèrement au survol */
+}
+
+.client-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  margin-bottom: 8px;
+  padding: 8px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s;
+}
+
+.client-card:hover {
+  background-color: #e6e6e6;
+}
+
+.client-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+  
+.client-card h4 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #555;
+}
+
+.client-card p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #777;
+}
+
+.selected-client-container {
+  flex: 1; /* Prend l'espace restant à droite */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-left: 1px solid #ccc;
+  padding: 16px;
+}
+
+.selected-client-video img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------------------------------------- */
+/* Conteneur des boutons au-dessus de l'image */
+.button-group-overlay {
+  position: absolute;
+  top: 10px; /* Décalé de 10px depuis le haut */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px; /* Espacement entre les boutons */
+  z-index: 2;
+}
+
+/* Boutons modernes */
+.btn-overlay {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-overlay:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image avec position relative pour l'overlay */
+.selected-client-video {
+  position: relative;
+  display: inline-block;
+  width: 100%; /* S'adapte à la taille du conteneur */
+}
+
+.selected-video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+

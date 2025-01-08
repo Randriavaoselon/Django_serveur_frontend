@@ -1,0 +1,66 @@
+
+  
+  .ReactModal__Overlay {
+    z-index: 1000; /* Niveau élevé pour la modale */
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    z-index: 1; /* Plus bas que la modale */
+  }
+  
+  .grid-item {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .grid-item-checkbox,
+  .grid-item-trash {
+    position: absolute;
+    top: 10px;
+    z-index: 2; /* Contrôle des interactions sur les éléments */
+  }
+  
+  .grid-item-trash {
+    right: 10px;
+    color: red;
+    cursor: pointer;
+  }
+  
+  .modal-image {
+    max-height: 80vh;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .close-modal-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .back-button {
+    border-radius: 0; /* Supprime les arrondis */
+    padding: 10px 50px;
+    background-color: #007bff; /* Couleur de fond (modifiable) */
+    color: white; /* Couleur du texte */
+    border: none; /* Supprime la bordure par défaut */
+    cursor: pointer;
+    font-size: 16px; /* Taille du texte */
+    text-transform: uppercase;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3; /* Couleur lors du survol */
+  }
